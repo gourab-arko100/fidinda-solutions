@@ -21,9 +21,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container grid gap-12 pb-12 pt-16 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_0.9fr_1.1fr] lg:gap-8">
+      <div className="container grid grid-cols-2 gap-x-6 gap-y-10 pb-10 pt-14 sm:gap-12 sm:pb-12 sm:pt-16 lg:grid-cols-[1.5fr_1fr_1fr_0.9fr_1.1fr] lg:gap-8">
         {/* Brand + contact */}
-        <div className="sm:col-span-2 lg:col-span-1">
+        <div className="col-span-2 lg:col-span-1">
           <Link href="/" className="inline-block rounded-lg bg-white px-4 py-3" aria-label="Fidinda Solutions — Home">
             <Logo variant="dark" className="h-9 w-auto" />
           </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
 
         <nav aria-label={services.title}>
           <h3 className="footer-title">{services.title}</h3>
-          <ul className="space-y-3.5">
+          <ul className="space-y-3 sm:space-y-3.5">
             {services.links.map((l) => (
               <li key={l.label}>
                 <a href={DIVISION_URLS[l.division]} className="footer-link">
@@ -70,7 +70,7 @@ export default function Footer() {
 
         <nav aria-label={clients.title}>
           <h3 className="footer-title">{clients.title}</h3>
-          <ul className="space-y-3.5">
+          <ul className="space-y-3 sm:space-y-3.5">
             {clients.links.map((l) => (
               <li key={l.label}>
                 <Link href={l.href} className="footer-link">
@@ -83,7 +83,7 @@ export default function Footer() {
 
         <nav aria-label={company.title}>
           <h3 className="footer-title">{company.title}</h3>
-          <ul className="space-y-3.5">
+          <ul className="space-y-3 sm:space-y-3.5">
             {company.links.map((l) => (
               <li key={l.label}>
                 <Link href={l.href} className="footer-link">
@@ -96,7 +96,7 @@ export default function Footer() {
 
         <nav aria-label="Our Divisions">
           <h3 className="footer-title">Our Divisions</h3>
-          <ul className="space-y-3.5">
+          <ul className="space-y-3 sm:space-y-3.5">
             {divisions.map((d) => (
               <li key={d.slug}>
                 <a href={d.url} className="footer-link">

@@ -7,15 +7,40 @@ export default function HeroGateway() {
     <div className="relative">
       <div className="absolute -inset-4 rounded-[2.25rem] bg-gradient-to-br from-brand-red/30 via-transparent to-white/10 blur-2xl" aria-hidden />
       <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/[0.07] p-3 shadow-lift backdrop-blur-xl">
-        <div className="flex items-center justify-between px-4 pb-3 pt-3">
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/70">Where would you like to go?</p>
+        <div className="flex items-center justify-between gap-3 px-3 pb-3 pt-2 sm:px-4 sm:pt-3">
+          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/70 sm:text-xs sm:tracking-[0.22em]">Where would you like to go?</p>
           <span className="flex gap-1.5" aria-hidden>
             <span className="h-2 w-2 rounded-full bg-brand-red" />
             <span className="h-2 w-2 rounded-full bg-white/30" />
             <span className="h-2 w-2 rounded-full bg-white/30" />
           </span>
         </div>
-        <ul className="space-y-2">
+        {/* Phones: compact 2 × 2 tiles */}
+        <ul className="grid grid-cols-2 gap-2 sm:hidden">
+          {divisions.map((d) => {
+            const Icon = divisionIcon[d.icon];
+            return (
+              <li key={d.slug}>
+                <a
+                  href={d.url}
+                  className="flex h-full flex-col gap-3 rounded-2xl bg-white/[0.07] p-4 transition-colors active:bg-white/15"
+                  aria-label={`Visit the ${d.name} website`}
+                >
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-navy">
+                    <Icon size={20} />
+                  </span>
+                  <span className="flex items-center justify-between gap-1 font-display text-[15px] font-bold text-white">
+                    {d.shortName}
+                    <ArrowRight size={15} className="shrink-0 text-white/60" />
+                  </span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+
+        {/* Tablet & desktop: full list */}
+        <ul className="hidden space-y-2 sm:block">
           {divisions.map((d, i) => {
             const Icon = divisionIcon[d.icon];
             return (

@@ -29,7 +29,7 @@ export default function DivisionCard({ division: d, compact }: { division: Divis
       {/* Body */}
       <div className="relative flex flex-1 flex-col px-7 pb-8 sm:px-8">
         <span className="absolute left-0 top-0 h-[3px] w-16 bg-brand-red transition-all duration-500 group-hover:w-full" aria-hidden />
-        <div className="-mt-7 mb-5 w-fit rounded-2xl ring-[6px] ring-card">
+        <div className="relative z-10 -mt-7 mb-5 w-fit rounded-2xl bg-card ring-[6px] ring-card">
           <DivisionLogo division={d} />
         </div>
         <h3 className="text-2xl font-extrabold leading-snug tracking-tight text-fg">{d.name}</h3>

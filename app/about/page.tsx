@@ -41,7 +41,7 @@ export default function AboutPage() {
             <h2 className="h-section mt-4">{about.whoWeAre.heading}</h2>
             <div className="mt-8 space-y-6 text-lg leading-relaxed text-fg/75">
               {about.whoWeAre.paragraphs.map((p, i) => (
-                <p key={i} className={i === 0 ? "first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-6xl first-letter:font-extrabold first-letter:leading-[0.9] first-letter:text-brand-red" : ""}>
+                <p key={i} className={i === 0 ? "sm:first-letter:float-left sm:first-letter:mr-3 sm:first-letter:font-display sm:first-letter:text-6xl sm:first-letter:font-extrabold sm:first-letter:leading-[0.9] sm:first-letter:text-brand-red" : ""}>
                   {p}
                 </p>
               ))}
@@ -84,13 +84,17 @@ export default function AboutPage() {
               className="absolute left-0 right-0 top-8 hidden h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent md:block"
               aria-hidden
             />
-            <ol className="relative grid gap-8 md:grid-cols-3">
+            <ol className="relative ml-2 grid gap-5 border-l-2 border-brand-red/30 pl-6 md:ml-0 md:grid-cols-3 md:gap-8 md:border-0 md:pl-0">
               {about.journey.items.map((j, i) => (
-                <Reveal as="li" key={j.year} delay={i * 120}>
-                  <span className="relative z-10 flex h-16 w-fit min-w-16 items-center justify-center rounded-full bg-brand-red px-6 font-display text-sm font-bold text-white shadow-glow ring-8 ring-page md:mx-auto">
+                <Reveal as="li" key={j.year} delay={i * 120} className="relative">
+                  <span className="absolute -left-[33px] top-7 h-4 w-4 rounded-full bg-brand-red ring-4 ring-page md:hidden" aria-hidden />
+                  <span className="relative z-10 hidden h-16 w-fit min-w-16 items-center justify-center rounded-full bg-brand-red px-6 font-display text-sm font-bold text-white shadow-glow ring-8 ring-page md:mx-auto md:flex">
                     {j.year}
                   </span>
-                  <div className="mt-6 rounded-[1.5rem] border border-line/10 bg-card p-7 shadow-card md:text-center">
+                  <div className="rounded-[1.5rem] border border-line/10 bg-card p-6 shadow-card md:mt-6 md:p-7 md:text-center">
+                    <span className="mb-3 inline-block rounded-full bg-brand-red px-3 py-1 font-display text-xs font-bold text-white md:hidden">
+                      {j.year}
+                    </span>
                     <h3 className="text-xl font-extrabold text-fg">{j.title}</h3>
                     <p className="mt-2 text-fg/70">{j.text}</p>
                   </div>
@@ -188,14 +192,14 @@ export default function AboutPage() {
               const Icon = beliefIcon[b.icon];
               return (
                 <Reveal key={b.title} delay={i * 80}>
-                  <article className="group relative flex h-full gap-6 overflow-hidden rounded-[1.75rem] border border-line/10 bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-9">
+                  <article className="group relative flex h-full gap-4 overflow-hidden rounded-[1.75rem] border border-line/10 bg-card p-6 shadow-card sm:gap-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-9">
                     <span
                       className="pointer-events-none absolute -bottom-14 -right-2 font-display text-[10rem] font-extrabold leading-none text-fg/[0.04]"
                       aria-hidden
                     >
                       F
                     </span>
-                    <span className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-navy text-white transition-colors group-hover:bg-brand-red dark:bg-white/10">
+                    <span className="relative flex h-12 w-12 shrink-0 items-center sm:h-16 sm:w-16 justify-center rounded-2xl bg-navy text-white transition-colors group-hover:bg-brand-red dark:bg-white/10">
                       <Icon size={28} />
                     </span>
                     <div className="relative">

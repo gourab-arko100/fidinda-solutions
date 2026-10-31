@@ -102,18 +102,18 @@ export default function ContactPage() {
               {contactPage.directHeading}
             </h2>
           </Reveal>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
             {divisions.map((d, i) => (
               <Reveal key={d.slug} delay={i * 80}>
                 <a
                   href={d.contactUrl}
-                  className="group relative flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-line/10 bg-card p-6 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-red/40 hover:shadow-lift"
+                  className="group relative flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-line/10 bg-card p-4 shadow-card sm:p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-red/40 hover:shadow-lift"
                 >
                   <span className="absolute left-0 top-0 h-1 w-10 bg-brand-red transition-all duration-500 group-hover:w-full" aria-hidden />
                   <DivisionLogo division={d} />
-                  <h3 className="mt-5 font-bold text-fg">{d.name}</h3>
-                  <p className="mt-1 text-sm text-fg/60">{d.tags.slice(0, 2).join(" · ")}</p>
-                  <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-bold text-brand-red">
+                  <h3 className="mt-4 text-[15px] font-bold leading-snug text-fg sm:mt-5 sm:text-base">{d.name}</h3>
+                  <p className="mt-1 hidden text-sm text-fg/60 sm:block">{d.tags.slice(0, 2).join(" · ")}</p>
+                  <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-[13px] font-bold text-brand-red sm:pt-6 sm:text-sm">
                     Contact {d.shortName} <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
                   </span>
                 </a>

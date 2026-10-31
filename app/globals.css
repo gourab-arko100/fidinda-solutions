@@ -43,6 +43,11 @@
   h4 {
     @apply font-display;
   }
+  /* Grid children may shrink below their content width — stops long one-line
+     text (e.g. truncated labels) from pushing a section wider than a phone screen. */
+  .grid > * {
+    min-width: 0;
+  }
   ::selection {
     background: rgba(225, 4, 28, 0.18);
   }
@@ -82,7 +87,7 @@
   }
 
   .h-section {
-    @apply font-display text-3xl font-extrabold leading-[1.15] tracking-tight text-fg sm:text-4xl lg:text-[2.6rem];
+    @apply font-display text-[1.75rem] font-extrabold leading-[1.15] tracking-tight text-fg sm:text-4xl lg:text-[2.6rem];
   }
   .lead {
     @apply text-lg leading-relaxed text-fg/70;
@@ -114,10 +119,10 @@
   }
 
   .footer-title {
-    @apply mb-6 font-display text-lg font-bold text-white;
+    @apply mb-4 font-display text-base font-bold text-white sm:mb-6 sm:text-lg;
   }
   .footer-link {
-    @apply text-[15px] text-white/70 transition-colors duration-200 hover:text-white;
+    @apply text-[14px] text-white/70 transition-colors duration-200 hover:text-white sm:text-[15px];
   }
 
   .label {
@@ -135,7 +140,7 @@
   }
 
   .section {
-    @apply py-20 sm:py-24 lg:py-28;
+    @apply py-16 sm:py-24 lg:py-28;
   }
 
   .tag {

@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="bg-grid-light absolute inset-0 -z-10 opacity-50" aria-hidden />
         <span className="absolute -left-40 top-1/3 -z-10 h-[30rem] w-[30rem] rounded-full bg-brand-red/25 blur-[120px]" aria-hidden />
 
-        <div className="container grid items-center gap-14 py-20 sm:py-24 lg:min-h-[calc(100vh-76px)] lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:py-28">
+        <div className="container grid items-center gap-10 py-12 sm:gap-14 sm:py-24 lg:min-h-[calc(100vh-76px)] lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:py-28">
           <div className="animate-fade-up">
             <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-red" aria-hidden />
@@ -51,15 +51,15 @@ export default function HomePage() {
               <span className="text-gradient-red">Finance, Management, Healthcare &amp; Travel</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/80">{hero.subtext}</p>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <a href="#divisions" className="btn-primary px-7 py-3.5 text-[15px]">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">
+              <a href="#divisions" className="btn-primary justify-center px-7 py-3.5 text-[15px]">
                 {hero.primaryCta} <ArrowRight size={18} />
               </a>
-              <Link href="/contact" className="btn-ghost-light px-7 py-3 text-[15px]">
+              <Link href="/contact" className="btn-ghost-light justify-center px-7 py-3 text-[15px]">
                 {hero.secondaryCta}
               </Link>
             </div>
-            <ul className="mt-12 flex flex-wrap gap-x-7 gap-y-3 text-sm text-white/75">
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2.5 text-[13px] text-white/75 sm:mt-12 sm:gap-x-7 sm:text-sm">
               <li className="flex items-center gap-2">
                 <Award size={18} className="text-brand-red" /> Licensed Tax Agent (GDT)
               </li>
@@ -146,23 +146,25 @@ export default function HomePage() {
               const Icon = beliefIcon[b.icon];
               return (
                 <Reveal key={b.title} delay={i * 90}>
-                  <article className="group relative h-full overflow-hidden rounded-[1.75rem] border border-line/10 bg-card p-7 shadow-card transition-all duration-500 hover:-translate-y-2 hover:bg-navy hover:shadow-lift dark:hover:bg-navy-800">
+                  <article className="group relative flex h-full gap-4 overflow-hidden rounded-[1.75rem] border border-line/10 bg-card p-6 shadow-card sm:block sm:p-7 transition-all duration-500 hover:-translate-y-2 hover:bg-navy hover:shadow-lift dark:hover:bg-navy-800">
                     <span
                       className="pointer-events-none absolute -bottom-12 -right-3 font-display text-[9rem] font-extrabold leading-none text-fg/[0.04] transition-colors duration-500 group-hover:text-white/[0.06]"
                       aria-hidden
                     >
                       F
                     </span>
-                    <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-white transition-colors duration-500 group-hover:bg-brand-red dark:bg-white/10">
-                      <Icon size={26} />
+                    <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-navy text-white transition-colors duration-500 group-hover:bg-brand-red dark:bg-white/10 sm:h-14 sm:w-14">
+                      <Icon size={24} />
                     </span>
-                    <h3 className="relative mt-7 text-2xl font-extrabold text-fg transition-colors duration-500 group-hover:text-white">
+                    <div className="relative min-w-0">
+                    <h3 className="relative text-xl font-extrabold sm:mt-7 sm:text-2xl text-fg transition-colors duration-500 group-hover:text-white">
                       <span className="text-brand-red">F</span>
                       {b.title.slice(1)}
                     </h3>
                     <p className="relative mt-3 text-[15px] leading-relaxed text-fg/70 transition-colors duration-500 group-hover:text-white/80">
                       {b.text}
                     </p>
+                    </div>
                   </article>
                 </Reveal>
               );
@@ -182,7 +184,7 @@ export default function HomePage() {
               const Icon = audienceIcon[w.icon];
               return (
                 <Reveal key={w.title} delay={i * 90}>
-                  <article className="group relative isolate flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-[1.75rem] p-7 shadow-lift">
+                  <article className="group relative isolate flex aspect-[16/10] flex-col justify-end overflow-hidden rounded-[1.75rem] p-6 shadow-lift sm:aspect-[3/4] sm:p-7">
                     <Photo
                       photo={w.photo}
                       sizes="(min-width: 1024px) 300px, (min-width: 640px) 50vw, 100vw"
