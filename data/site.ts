@@ -75,7 +75,7 @@ export const footerColumns = {
     title: "Company",
     links: [
       { label: "About Us", href: "/about" },
-      { label: "Message from Co-founder", href: "/about#co-founder" },
+      { label: "Message from the Co-Founder", href: "/about#co-founder" },
       { label: "Our Mission & Vision", href: "/mission-vision" },
       { label: "Our Beliefs", href: "/mission-vision#beliefs" },
       { label: "Contact Us", href: "/contact" },

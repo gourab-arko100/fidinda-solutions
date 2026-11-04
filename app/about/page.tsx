@@ -83,19 +83,19 @@ export default function AboutPage() {
               className="absolute left-0 right-0 top-8 hidden h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent lg:block"
               aria-hidden
             />
-            <ol className="relative ml-2 grid gap-5 border-l-2 border-line/15 pl-6 lg:ml-0 lg:grid-cols-4 lg:gap-6 lg:border-0 lg:pl-0">
+            <ol className="relative ml-2 grid gap-5 border-l-2 border-brand-red/30 pl-6 lg:ml-0 lg:grid-cols-4 lg:gap-6 lg:border-0 lg:pl-0">
               {about.journey.items.map((j, i) => (
-                <Reveal as="li" key={j.year} delay={i * 120} className="relative lg:flex lg:flex-col">
-                  <span className="absolute -left-[33px] top-7 h-4 w-4 rounded-full bg-navy ring-4 ring-page lg:hidden" aria-hidden />
-                  <span className="relative z-10 hidden h-16 w-fit min-w-16 items-center justify-center rounded-full bg-navy px-5 font-display text-sm font-bold text-white ring-8 ring-page lg:mx-auto lg:flex">
+                <Reveal as="li" key={j.year} delay={i * 120} className="relative">
+                  <span className="absolute -left-[33px] top-7 h-4 w-4 rounded-full bg-brand-red ring-4 ring-page lg:hidden" aria-hidden />
+                  <span className="relative z-10 hidden h-16 w-fit min-w-16 items-center justify-center rounded-full bg-brand-red px-6 font-display text-sm font-bold text-white shadow-glow ring-8 ring-page lg:mx-auto lg:flex">
                     {j.year}
                   </span>
-                  <div className="rounded-[1.5rem] border border-line/10 bg-card p-6 shadow-card lg:mt-6 lg:flex-1 lg:p-6 lg:text-center">
-                    <span className="mb-3 inline-block rounded-full bg-navy px-3 py-1 font-display text-xs font-bold text-white lg:hidden">
+                  <div className="rounded-[1.5rem] border border-line/10 bg-card p-6 shadow-card lg:mt-6 lg:p-7 lg:text-center">
+                    <span className="mb-3 inline-block rounded-full bg-brand-red px-3 py-1 font-display text-xs font-bold text-white lg:hidden">
                       {j.year}
                     </span>
-                    <h3 className="text-lg font-extrabold leading-snug text-fg">{j.title}</h3>
-                    <p className="mt-2 text-[15px] leading-relaxed text-fg/70">{j.text}</p>
+                    <h3 className="text-xl font-extrabold text-fg">{j.title}</h3>
+                    <p className="mt-2 text-fg/70">{j.text}</p>
                   </div>
                 </Reveal>
               ))}

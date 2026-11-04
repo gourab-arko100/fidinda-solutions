@@ -47,9 +47,8 @@ export const photos = {
     page: "https://unsplash.com/photos/person-holding-pencil-near-laptop-computer-5fNmWej4tAA",
   },
   management: {
-    src: u("photo-1758518731706-be5d5230e5a5"),
-    alt: "Business team collaborating in a modern office",
-    page: "https://unsplash.com/photos/diverse-business-team-collaborating-in-a-modern-office-_4tpElFQemQ",
+    src: "/images/divisions/management.jpg",
+    alt: "Consulting team in a strategy meeting around a conference table",
   },
   health: {
     src: u("photo-1758691461957-474a7686e388"),
@@ -111,9 +110,8 @@ export const photos = {
     page: "https://unsplash.com/photos/shallow-focus-photograph-of-black-and-gray-compass-uCMKx2H1Y38",
   },
   vision: {
-    src: u("photo-1522506209496-4536d9020ec4"),
-    alt: "Person standing on a mountain top facing the sunrise",
-    page: "https://unsplash.com/photos/person-standing-on-top-of-the-mountain-facing-sunrise-CV7KPRM6fHc",
+    src: "/images/about/vision.jpg",
+    alt: "Businesswoman looking ahead through binoculars towards a staircase and open door",
   },
   mission: {
     src: u("photo-1586936893354-362ad6ae47ba"),

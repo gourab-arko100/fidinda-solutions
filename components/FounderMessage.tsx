@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 import Reveal from "./Reveal";
-import { ArrowRight, Check } from "./Icons";
 import { LogoMark } from "./Logo";
 import { founderMessage as m } from "@/data/content";
 
@@ -11,7 +9,7 @@ function Rich({ text }: { text: string }) {
     <>
       {text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
         part.startsWith("**") ? (
-          <strong key={i} className="font-bold text-fg">
+          <strong key={i} className="font-semibold text-fg">
             {part.slice(2, -2)}
           </strong>
         ) : (
@@ -22,13 +20,20 @@ function Rich({ text }: { text: string }) {
   );
 }
 
-/** "Message from Co-founder" — text on the left, portrait on the right. */
+/**
+ * "Message from the Co-Founder & Director"
+ * Top: welcome line + opening paragraphs beside the portrait.
+ * Below: the rest of the letter in a comfortable reading column, then the closing line and signature.
+ */
 export default function FounderMessage() {
+  const lead = m.paragraphs.slice(0, m.leadCount);
+  const rest = m.paragraphs.slice(m.leadCount);
+
   return (
     <section id="co-founder" className="section relative isolate overflow-hidden bg-soft" aria-labelledby="founder-heading">
       <div className="bg-dots absolute inset-x-0 top-0 -z-10 h-72 [mask-image:linear-gradient(black,transparent)]" aria-hidden />
       <div className="container">
-        <Reveal className="mx-auto mb-14 max-w-3xl text-center">
+        <Reveal className="mx-auto mb-12 max-w-4xl text-center sm:mb-14">
           <p className="eyebrow eyebrow-center">{m.eyebrow}</p>
           <h2 id="founder-heading" className="h-section mt-4">
             {m.heading}
@@ -36,8 +41,8 @@ export default function FounderMessage() {
           <p className="mt-5 font-display text-lg font-semibold leading-relaxed text-fg/75 sm:text-xl">{m.subheading}</p>
         </Reveal>
 
+        {/* Opening + portrait */}
         <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-16">
-          {/* Message */}
           <div className="order-2 lg:order-1">
             <Reveal className="relative">
               <span
@@ -46,18 +51,19 @@ export default function FounderMessage() {
               >
                 &ldquo;
               </span>
-              <div className="relative space-y-5 text-[17px] leading-relaxed text-fg/75">
-                {m.paragraphs.map((p, i) => (
-                  <p key={i} className={i === 0 ? "font-display text-xl font-semibold leading-relaxed text-fg" : ""}>
+              <p className="relative font-display text-xl font-semibold leading-relaxed text-fg sm:text-[1.4rem]">
+                <Rich text={m.welcome} />
+              </p>
+              <div className="relative mt-6 space-y-5 text-[17px] leading-relaxed text-fg/75">
+                {lead.map((p, i) => (
+                  <p key={i}>
                     <Rich text={p} />
                   </p>
                 ))}
               </div>
             </Reveal>
-
           </div>
 
-          {/* Portrait */}
           <Reveal delay={120} className="order-1 lg:order-2">
             <figure className="relative isolate mx-auto max-w-sm pb-6 pr-6 lg:max-w-none">
               <span className="absolute bottom-0 right-0 -z-10 h-2/3 w-2/3 rounded-[2rem] bg-line/10" aria-hidden />
@@ -75,7 +81,7 @@ export default function FounderMessage() {
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/85 to-transparent px-6 pb-6 pt-24 text-white">
                   <LogoMark light className="absolute bottom-5 right-5 w-10 opacity-60" />
                   <figcaption>
-                    <span className="block font-display text-xl font-extrabold leading-snug">{m.name}</span>
+                    <span className="block pr-12 font-display text-xl font-extrabold leading-snug">{m.name}</span>
                     <span className="mt-1 flex items-center gap-2 text-sm font-semibold text-white/80">
                       <span className="h-[2px] w-6 bg-brand-red" aria-hidden />
                       {m.role}
@@ -87,27 +93,27 @@ export default function FounderMessage() {
           </Reveal>
         </div>
 
-        <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {m.principles.map((pr, i) => (
-            <Reveal as="li" key={pr.lead} delay={i * 80}>
-              <div className="group h-full rounded-2xl border border-line/10 bg-card p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-red/40 hover:shadow-lift">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-red/10 text-brand-red transition-colors group-hover:bg-brand-red group-hover:text-white">
-                  <Check size={18} strokeWidth={2.6} />
-                </span>
-                <p className="mt-4 font-display font-bold leading-snug text-fg">{pr.lead}</p>
-                <p className="mt-2 text-[15px] leading-relaxed text-fg/70">{pr.text}</p>
-              </div>
-            </Reveal>
+        {/* The rest of the letter */}
+        <Reveal className="mx-auto mt-12 max-w-4xl space-y-5 text-[17px] leading-relaxed text-fg/75 lg:mt-16">
+          {rest.map((p, i) => (
+            <p key={i}>
+              <Rich text={p} />
+            </p>
           ))}
-        </ul>
+        </Reveal>
 
-        <Reveal className="mt-8 flex flex-col gap-5 rounded-2xl border-l-4 border-brand-red bg-card p-6 shadow-card sm:flex-row sm:items-center sm:justify-between sm:p-7">
-          <p className="text-[17px] leading-relaxed text-fg/80">
-            <strong className="font-bold text-fg">{m.closing.lead}</strong> {m.closing.text}
+        {/* Closing line + signature */}
+        <Reveal className="mx-auto mt-10 max-w-4xl">
+          <p className="rounded-2xl border-l-4 border-brand-red bg-card p-6 font-display text-xl font-extrabold leading-snug text-fg shadow-card sm:p-8 sm:text-2xl">
+            {m.closing}
           </p>
-          <Link href="/contact" className="btn-primary shrink-0 justify-center">
-            Contact Us <ArrowRight size={16} />
-          </Link>
+          <div className="mt-8 flex items-center gap-4">
+            <span className="h-12 w-[3px] shrink-0 rounded bg-brand-red" aria-hidden />
+            <address className="not-italic leading-relaxed">
+              <span className="block font-display text-lg font-extrabold text-fg">{m.signature.name}</span>
+              <span className="block text-[15px] text-fg/65">{m.signature.lines.join(" · ")}</span>
+            </address>
+          </div>
         </Reveal>
       </div>
     </section>

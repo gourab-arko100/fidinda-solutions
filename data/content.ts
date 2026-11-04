@@ -144,9 +144,9 @@ export const about = {
     /** Edit the "year" labels freely. */
     items: [
       { year: "2023", title: "Founded", text: "Founded as Fidinda Financial & Management Solutions Co., Ltd." },
-      { year: "Expansion 2025", title: "Fidinda Health Solutions", text: "Fidinda Health Solutions launched — healthcare facilitation for Cambodian patients and families seeking care abroad." },
-      { year: "Expansion 2026", title: "Fidinda Travel Solutions", text: "Fidinda Travel Solutions launched — personalised travel arrangements for individuals, families and groups." },
-      { year: "Today", title: "Fidinda Solutions", text: "One brand with four specialised divisions: Financial, Management, Health and Travel." },
+      { year: "Expansion 2025", title: "New division", text: "Fidinda Health Solutions launched." },
+      { year: "Expansion 2026", title: "New division", text: "Fidinda Travel Solutions launched." },
+      { year: "Today", title: "One brand", text: "Fidinda Solutions — one brand with four specialised divisions." },
     ],
   },
   divisionsHeading: "Our Four Divisions",
@@ -220,39 +220,34 @@ export const notFound = {
 
 export const founderMessage = {
   eyebrow: "Leadership",
-  heading: "Message from Co-founder",
-  subheading:
-    "Welcome to Fidinda: Your Partner in Building Sustainable Businesses and Organizations Through Comprehensive Solutions",
+  heading: "Message from the Co-Founder & Director",
+  subheading: "Building Trust, Creating Opportunities, and Delivering Solutions Beyond Boundaries",
+  welcome: "Welcome to **Fidinda Solutions** – **Your Trusted Partner in Finance, Management, Healthcare, and Travel.**",
   name: "Fazleh Borkat Manik Shah Mazumder",
-  role: "Founding Director",
-  photo: { src: "/images/co-founder.jpg", alt: "Fazleh Borkat Manik Shah Mazumder, Founding Director of Fidinda" },
-  /** Paragraphs. Wrap words in **double asterisks** to make them bold. */
+  role: "Co-Founder & Director",
+  photo: { src: "/images/co-founder.jpg", alt: "Fazleh Borkat Manik Shah Mazumder, Co-Founder & Director of Fidinda Solutions" },
+  /**
+   * Paragraphs. Wrap words in **double asterisks** to make them bold.
+   * The first `leadCount` paragraphs sit beside the photo; the rest continue below it.
+   */
+  leadCount: 3,
   paragraphs: [
-    "As the Co-Founder and Director of Fidinda Financial and Management Solutions Co., Ltd., I have dedicated my career to fostering the success of businesses and organizations through comprehensive solutions. With unwavering commitment, we forge ground-breaking solutions, leveraging collaboration and cutting-edge technology to deliver a comprehensive approach that empowers your future.",
-    "We understand the intricate financial landscapes you navigate. Whether you're a burgeoning enterprise requiring guidance, or an established organization seeking to optimize financial management strategies, Fidinda serves as your bridge to lasting financial strength. At our company, we understand the importance of effective management for the success of any organization. That's why we offer management services, ranging from personnel management to contract management. We also excel in managing the planning, implementation, and monitoring activities for NGOs, ensuring their projects are executed smoothly and efficiently.",
-    "Our philosophy centres on **collaborative partnerships**. Our team of seasoned professionals becomes an extension of yours, meticulously analyzing your specific needs and aligning solutions with your long-term goals.",
+    "When we established Fidinda Financial & Management Solutions Co., Ltd. in Cambodia in 2023, our vision was to create a professional service organisation that businesses and institutions could rely upon for expertise, integrity, and practical solutions. We began our journey by helping businesses and organisations navigate the complexities of financial management, regulatory compliance, organisational development, and strategic decision-making.",
+    "Over the years, our interactions with clients, partners, and communities have strengthened an important belief: **the true value of a service organisation lies not merely in the services it delivers, but in its ability to understand people's needs, simplify complex processes, and create meaningful solutions.**",
+    "Guided by this philosophy, we have evolved beyond our original areas of expertise. Today, under the unified identity of **Fidinda Solutions**, we are expanding our commitment through four specialised business verticals, each designed to respond to the changing needs of businesses, organisations, individuals, and families.",
+    "Our journey from financial and management consultancy to healthcare facilitation and travel services reflects our commitment to responding to emerging needs and creating opportunities to serve a wider community. While our areas of operation have diversified, our fundamental approach remains unchanged: understanding individual needs, delivering practical solutions, and building relationships founded on trust.",
+    "Although these four divisions serve different purposes, they are united by a common philosophy and a shared commitment to delivering quality services.",
+    "The Four Fs of Fidinda – Faith, Friendship, Flexibility, and Focus – represent more than our corporate identity; they reflect the principles upon which we founded this organisation. These values have guided our journey from the beginning and continue to shape our decisions as we expand into new service sectors.",
+    "For us, these principles translate into a simple but meaningful commitment: earning the confidence of those we serve, building relationships that extend beyond individual transactions, adapting to changing needs, and remaining focused on delivering genuine value. We believe that maintaining these commitments consistently across diverse services is what will ultimately distinguish Fidinda Solutions.",
+    "Our growth is driven by opportunities to serve, not merely opportunities to expand. We believe that financial stability, effective management, access to suitable healthcare, and convenient travel arrangements all contribute, in different ways, to improving the lives and opportunities of the people and organisations we support.",
+    "As we enter this new chapter, our commitment to transparency, responsible business practices, technological innovation, and customer satisfaction remains unchanged. We will continue to strengthen our professional capabilities, develop meaningful partnerships, and explore opportunities that allow us to create sustainable value.",
+    "Most importantly, we understand that **trust is earned through consistent performance, responsible conduct, and the relationships we build over time.** Whether you are an entrepreneur establishing a business in Cambodia, an organisation seeking professional support, a family exploring medical treatment abroad, or a traveller planning your next journey, our aspiration is to be a partner you can approach with confidence.",
+    "On behalf of the entire Fidinda team, I extend my sincere appreciation to our clients, partners, and well-wishers for their continued trust and encouragement. We look forward to building stronger relationships, embracing new opportunities, and growing together in the years ahead.",
   ],
-  principles: [
-    {
-      lead: "Excellence is our unwavering commitment.",
-      text: "From meticulously compliant financial reporting to streamlined, risk-mitigated contract management, we deliver exceptional service that empowers data-driven decision-making and maximizes operational efficiency.",
-    },
-    {
-      lead: "Fidinda is your comprehensive financial solution provider.",
-      text: "From accounting and taxation to cutting-edge software solutions, we offer a holistic suite of services under one roof, streamlining your operations and optimizing your resource allocation.",
-    },
-    {
-      lead: "Transparency is paramount.",
-      text: "Our flexible pricing models allow you to choose the services you require, ensuring cost-effectiveness without compromising on quality.",
-    },
-    {
-      lead: "Most importantly, we are invested in your enduring success.",
-      text: "Our mission is to be your trusted partner, propelling you toward achieving your financial objectives with unwavering confidence.",
-    },
-  ],
-  closing: {
-    lead: "Contact us today",
-    text: "and let's embark on a collaborative exploration of how Fidinda can empower you to navigate the financial landscape with proficiency and achieve long-term prosperity.",
+  closing: "Welcome to Fidinda Solutions – One Brand, Four Specialised Solutions, United by Trust.",
+  signature: {
+    name: "Fazleh Borkat Manik Shah Mazumder",
+    lines: ["Co-Founder & Director", "Fidinda Solutions", "Phnom Penh, Cambodia", "www.fidindasolutions.com"],
   },
 };
 
