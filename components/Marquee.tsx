@@ -3,9 +3,9 @@ export default function Marquee({ items }: { items: string[] }) {
   const row = (hidden?: boolean) => (
     <ul className="flex shrink-0 items-center gap-10 pr-10" aria-hidden={hidden}>
       {items.map((t, i) => (
-        <li key={i} className="flex items-center gap-10 whitespace-nowrap font-display text-lg font-bold text-fg/55 sm:text-xl">
+        <li key={i} className="flex items-center gap-10 whitespace-nowrap font-display text-lg font-bold text-navy dark:text-white sm:text-xl">
           {t}
-          <span className="h-1.5 w-1.5 rounded-full bg-fg/25" aria-hidden />
+          <span className="h-2 w-2 rotate-45 bg-brand-red" aria-hidden />
         </li>
       ))}
     </ul>
