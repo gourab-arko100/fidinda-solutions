@@ -28,6 +28,8 @@ const nextConfig: NextConfig = {
       { source: "/mission-vision-and-beliefs", destination: "/mission-vision", permanent: true },
       { source: "/our-services", destination: "/divisions", permanent: true },
       { source: "/request-for-quotation", destination: "/contact", permanent: true },
+      { source: "/contact-us", destination: "/contact", permanent: true },
+      { source: "/blog", destination: "/articles", permanent: true },
     ];
   },
   async headers() {

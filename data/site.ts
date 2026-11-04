@@ -81,6 +81,15 @@ export const footerColumns = {
       { label: "Contact Us", href: "/contact" },
     ],
   },
+  /** Point these at real pages/URLs when ready (e.g. a PDF, the Financial site, or a full URL). */
+  resources: {
+    title: "Resource Library",
+    links: [
+      { label: "Publications", href: "/resources#publications" },
+      { label: "Articles", href: "/articles" },
+      { label: "Local Legislations", href: "/resources#legislations" },
+    ],
+  },
 };
 
 /** Header menu. (No "Home" item — the logo links to the home page.) */

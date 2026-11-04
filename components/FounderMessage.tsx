@@ -102,18 +102,11 @@ export default function FounderMessage() {
           ))}
         </Reveal>
 
-        {/* Closing line + signature */}
+        {/* Closing line */}
         <Reveal className="mx-auto mt-10 max-w-4xl">
           <p className="rounded-2xl border-l-4 border-brand-red bg-card p-6 font-display text-xl font-extrabold leading-snug text-fg shadow-card sm:p-8 sm:text-2xl">
             {m.closing}
           </p>
-          <div className="mt-8 flex items-center gap-4">
-            <span className="h-12 w-[3px] shrink-0 rounded bg-brand-red" aria-hidden />
-            <address className="not-italic leading-relaxed">
-              <span className="block font-display text-lg font-extrabold text-fg">{m.signature.name}</span>
-              <span className="block text-[15px] text-fg/65">{m.signature.lines.join(" · ")}</span>
-            </address>
-          </div>
         </Reveal>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import type { DivisionSlug } from "./divisions";
 import { photos, type Photo } from "./images";
+import { sortedArticles } from "./articles";
 
 /* ------------------------------------------------------------------ */
 /*  HOME                                                               */
@@ -292,4 +293,27 @@ export const whyChooseUs = {
       photo: { src: "/images/why/comprehensive-solutions.jpg", alt: "Magnifying glass over financial charts and reports" },
     },
   ],
+};
+
+/* ------------------------------------------------------------------ */
+/*  RESOURCE LIBRARY (/resources)                                      */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Add items to each section as { title, href }. `href` can be a full URL, a PDF in /public
+ * (e.g. "/docs/tax-guide-2026.pdf") or a page on another Fidinda site.
+ */
+export const resourceLibrary = {
+  hero: {
+    eyebrow: "Resource Library",
+    heading: "Publications, articles and local legislation",
+    text: "Practical reading for businesses and organisations operating in Cambodia.",
+  },
+  sections: [
+    { id: "publications", title: "Publications", text: "Guides, brochures and reports published by Fidinda Solutions.", items: [] as { title: string; href: string }[] },
+    { id: "articles", title: "Articles", text: "Insights on accounting, taxation, compliance, management and more.", items: sortedArticles.map((a) => ({ title: a.title, href: `/articles/${a.slug}` })) as { title: string; href: string }[] },
+    { id: "legislations", title: "Local Legislations", text: "Key Cambodian laws, regulations and official notices relevant to businesses and NGOs.", items: [] as { title: string; href: string }[] },
+  ],
+  emptyText: "New resources are being added soon.",
+  helpText: "Looking for something specific? Our team can point you to the right document.",
 };
