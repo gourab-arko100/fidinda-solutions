@@ -60,9 +60,9 @@ export default function FounderMessage() {
           {/* Portrait */}
           <Reveal delay={120} className="order-1 lg:order-2">
             <figure className="relative isolate mx-auto max-w-sm pb-6 pr-6 lg:max-w-none">
-              <span className="absolute bottom-0 right-0 -z-10 h-2/3 w-2/3 rounded-[2rem] bg-brand-red" aria-hidden />
+              <span className="absolute bottom-0 right-0 -z-10 h-2/3 w-2/3 rounded-[2rem] bg-line/10" aria-hidden />
               <span className="absolute -left-4 -top-4 -z-10 h-24 w-24 rounded-3xl border-[10px] border-navy/15 dark:border-white/15" aria-hidden />
-              <div className="relative overflow-hidden rounded-[2rem] bg-navy shadow-lift">
+              <div className="relative overflow-hidden rounded-[2rem] bg-ink shadow-lift">
                 <img
                   src={m.photo.src}
                   alt={m.photo.alt}
@@ -72,7 +72,7 @@ export default function FounderMessage() {
                   decoding="async"
                   className="aspect-[4/5] w-full object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy via-navy/85 to-transparent px-6 pb-6 pt-24 text-white">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/85 to-transparent px-6 pb-6 pt-24 text-white">
                   <LogoMark light className="absolute bottom-5 right-5 w-10 opacity-60" />
                   <figcaption>
                     <span className="block font-display text-xl font-extrabold leading-snug">{m.name}</span>

@@ -25,6 +25,8 @@ const config: Config = {
           100: "#E8E5F3",
           50: "#F4F2FA",
         },
+        /* Neutral near-black for photo overlays and dark panels (keeps navy as an accent) */
+        ink: "#111019",
         brand: {
           red: "#E1041C", // Bright Red — RGB 225,4,28 — C0 M98 Y88 K12
           redDark: "#B80317",

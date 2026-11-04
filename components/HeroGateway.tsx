@@ -5,7 +5,6 @@ import { divisions } from "@/data/divisions";
 export default function HeroGateway() {
   return (
     <div className="relative">
-      <div className="absolute -inset-4 rounded-[2.25rem] bg-gradient-to-br from-brand-red/30 via-transparent to-white/10 blur-2xl" aria-hidden />
       <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/[0.07] p-3 shadow-lift backdrop-blur-xl">
         <div className="flex items-center justify-between gap-3 px-3 pb-3 pt-2 sm:px-4 sm:pt-3">
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/70 sm:text-xs sm:tracking-[0.22em]">Where would you like to go?</p>

@@ -42,8 +42,8 @@ export const aboutSnapshot = {
   stats: [
     { value: "2023", label: "Year Established" },
     { value: "4", label: "Specialised Divisions" },
-    { value: "15+", label: "Happy Clients" },
-    { value: "60+", label: "Years of Cumulative Experience" },
+    { value: "40+", label: "Corporate Clients" },
+    { value: "130+", label: "Years of Cumulative Experience" },
   ],
 };
 

@@ -39,9 +39,7 @@ export default function ContactPage() {
       <section className="section">
         <div className="container grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal className="space-y-6">
-            <div className="relative isolate overflow-hidden rounded-[2rem] bg-navy p-8 text-white shadow-lift sm:p-10 dark:ring-1 dark:ring-white/10">
-              <div className="bg-grid-light absolute inset-0 -z-10" aria-hidden />
-              <span className="absolute -bottom-24 -right-24 -z-10 h-64 w-64 rounded-full bg-brand-red/30 blur-[80px]" aria-hidden />
+            <div className="relative isolate overflow-hidden rounded-[2rem] bg-ink p-8 text-white shadow-lift sm:p-10 dark:ring-1 dark:ring-white/10">
               <LogoMark light className="absolute -right-6 -top-6 -z-10 w-36 opacity-10" />
               <h2 className="text-2xl font-extrabold">Get in touch</h2>
               <p className="mt-2 text-white/70">We reply in Khmer or English.</p>

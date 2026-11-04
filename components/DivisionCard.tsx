@@ -15,8 +15,7 @@ export default function DivisionCard({ division: d, compact }: { division: Divis
           maxWidth={1440}
           className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-navy/10" aria-hidden />
-        <div className="absolute inset-0 bg-brand-red/0 mix-blend-multiply transition-colors duration-500 group-hover:bg-brand-red/10" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-ink/10" aria-hidden />
         <span className="absolute left-5 top-5 rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md">
           {d.shortName}
         </span>
@@ -48,7 +47,7 @@ export default function DivisionCard({ division: d, compact }: { division: Divis
         <div className="mt-auto flex items-center justify-between gap-4 pt-7">
           <a
             href={d.url}
-            className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-red group-hover:bg-brand-red group-hover:shadow-glow dark:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-red group-hover:bg-brand-red dark:bg-white/10"
             aria-label={`Visit the ${d.name} website`}
           >
             Visit Website

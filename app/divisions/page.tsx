@@ -26,7 +26,7 @@ function Visual({ d, flip }: { d: Division; flip: boolean }) {
           maxWidth={1440}
           className="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-navy/90 via-navy/25 to-navy/10" aria-hidden />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/25 to-ink/10" aria-hidden />
         <span
           className={`absolute top-6 font-display text-6xl font-extrabold leading-none text-white/50 ${flip ? "left-7" : "right-7"}`}
           aria-hidden
@@ -44,7 +44,7 @@ function Visual({ d, flip }: { d: Division; flip: boolean }) {
 
       {/* Accent block peeks out from the bottom corner */}
       <span
-        className={`absolute -bottom-4 -z-10 h-28 w-28 rounded-3xl bg-brand-red/90 ${flip ? "-left-4" : "-right-4"}`}
+        className={`absolute -bottom-4 -z-10 h-28 w-28 rounded-3xl bg-line/10 ${flip ? "-left-4" : "-right-4"}`}
         aria-hidden
       />
     </div>
@@ -97,7 +97,7 @@ export default function DivisionsPage() {
                 <h2 id={`${d.slug}-heading`} className="h-section mt-4">
                   {d.name}
                 </h2>
-                <p className="mt-3 text-lg font-semibold text-brand-red">{d.tagline}</p>
+                <p className="mt-3 text-lg font-medium italic text-fg/60">{d.tagline}</p>
                 <p className="mt-5 leading-relaxed text-fg/75">{d.longDescription}</p>
 
                 <h3 className="mt-9 text-sm font-bold uppercase tracking-[0.18em] text-fg">Services</h3>

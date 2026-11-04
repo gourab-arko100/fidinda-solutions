@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
                     sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
                     className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" aria-hidden />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" aria-hidden />
                   <span className="absolute bottom-4 left-5 font-display text-4xl font-extrabold leading-none text-white/90 drop-shadow">
                     {String(i + 1).padStart(2, "0")}
                   </span>

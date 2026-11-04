@@ -21,7 +21,6 @@ export default function QuickHelp() {
 
   return (
     <div className="relative isolate overflow-hidden rounded-[2rem] border border-line/10 bg-soft px-6 py-10 sm:px-12 sm:py-12">
-      <span className="absolute -right-20 -top-24 -z-10 h-64 w-64 rounded-full bg-brand-red/10 blur-3xl" aria-hidden />
       <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.2fr]">
         <div>
           <p className="eyebrow">Quick help</p>

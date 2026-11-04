@@ -52,11 +52,10 @@ export default function AboutPage() {
             <div className="lg:sticky lg:top-28">
             <div className="relative mb-6 aspect-[4/3] overflow-hidden rounded-[2rem] shadow-lift">
               <Photo photo={photos.teamUnity} sizes="(min-width: 1024px) 400px, 100vw" maxWidth={1080} className="h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" aria-hidden />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" aria-hidden />
               <span className="absolute bottom-0 left-0 h-1 w-1/2 bg-brand-red" aria-hidden />
             </div>
-            <aside className="relative isolate overflow-hidden rounded-[2rem] bg-navy p-8 text-white shadow-lift dark:ring-1 dark:ring-white/10">
-              <div className="bg-grid-light absolute inset-0 -z-10" aria-hidden />
+            <aside className="relative isolate overflow-hidden rounded-[2rem] bg-ink p-8 text-white shadow-lift dark:ring-1 dark:ring-white/10">
               <LogoMark light className="absolute -bottom-8 -right-8 -z-10 w-48 opacity-10" />
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/70">At a glance</p>
               <dl className="mt-6 space-y-5">
@@ -84,15 +83,15 @@ export default function AboutPage() {
               className="absolute left-0 right-0 top-8 hidden h-[2px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent md:block"
               aria-hidden
             />
-            <ol className="relative ml-2 grid gap-5 border-l-2 border-brand-red/30 pl-6 md:ml-0 md:grid-cols-3 md:gap-8 md:border-0 md:pl-0">
+            <ol className="relative ml-2 grid gap-5 border-l-2 border-line/15 pl-6 md:ml-0 md:grid-cols-3 md:gap-8 md:border-0 md:pl-0">
               {about.journey.items.map((j, i) => (
                 <Reveal as="li" key={j.year} delay={i * 120} className="relative">
-                  <span className="absolute -left-[33px] top-7 h-4 w-4 rounded-full bg-brand-red ring-4 ring-page md:hidden" aria-hidden />
-                  <span className="relative z-10 hidden h-16 w-fit min-w-16 items-center justify-center rounded-full bg-brand-red px-6 font-display text-sm font-bold text-white shadow-glow ring-8 ring-page md:mx-auto md:flex">
+                  <span className="absolute -left-[33px] top-7 h-4 w-4 rounded-full bg-navy ring-4 ring-page md:hidden" aria-hidden />
+                  <span className="relative z-10 hidden h-16 w-fit min-w-16 items-center justify-center rounded-full bg-navy px-6 font-display text-sm font-bold text-white ring-8 ring-page md:mx-auto md:flex">
                     {j.year}
                   </span>
                   <div className="rounded-[1.5rem] border border-line/10 bg-card p-6 shadow-card md:mt-6 md:p-7 md:text-center">
-                    <span className="mb-3 inline-block rounded-full bg-brand-red px-3 py-1 font-display text-xs font-bold text-white md:hidden">
+                    <span className="mb-3 inline-block rounded-full bg-navy px-3 py-1 font-display text-xs font-bold text-white md:hidden">
                       {j.year}
                     </span>
                     <h3 className="text-xl font-extrabold text-fg">{j.title}</h3>
@@ -119,7 +118,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex flex-col">
                     <h3 className="text-xl font-extrabold text-fg">{d.name}</h3>
-                    <p className="mt-1 text-sm font-semibold text-brand-red">{d.tagline}</p>
+                    <p className="mt-1 text-sm font-medium italic text-fg/60">{d.tagline}</p>
                     <p className="mt-3 text-[15px] leading-relaxed text-fg/70">{d.description}</p>
                     <a href={d.url} className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-fg hover:text-brand-red">
                       Visit Website <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -152,17 +151,17 @@ export default function AboutPage() {
                       maxWidth={1440}
                       className="h-full w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-tr from-navy/60 via-navy/10 to-transparent" aria-hidden />
-                    <span className="absolute bottom-6 left-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-red text-white shadow-glow">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-ink/60 via-ink/10 to-transparent" aria-hidden />
+                    <span className="absolute bottom-6 left-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-navy shadow-lift">
                       <m.Icon size={30} />
                     </span>
                   </div>
                   <span
-                    className={`absolute -bottom-5 -z-10 h-2/5 w-2/5 rounded-[2rem] bg-navy dark:bg-white/10 ${flip ? "-left-5" : "-right-5"}`}
+                    className={`absolute -bottom-5 -z-10 h-2/5 w-2/5 rounded-[2rem] bg-line/10 ${flip ? "-left-5" : "-right-5"}`}
                     aria-hidden
                   />
                   <span
-                    className={`absolute -top-5 -z-10 h-24 w-24 rounded-3xl border-[10px] border-brand-red/70 ${flip ? "-right-5" : "-left-5"}`}
+                    className={`absolute -top-5 -z-10 h-24 w-24 rounded-3xl border-[10px] border-line/15 ${flip ? "-right-5" : "-left-5"}`}
                     aria-hidden
                   />
                 </Reveal>
@@ -223,12 +222,12 @@ export default function AboutPage() {
           <Reveal className="relative isolate lg:sticky lg:top-28">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2.25rem] shadow-lift">
               <Photo photo={photos.handshake} sizes="(min-width: 1024px) 460px, 100vw" maxWidth={1440} className="h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" aria-hidden />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent" aria-hidden />
               <p className="absolute inset-x-7 bottom-7 font-display text-xl font-bold leading-snug text-white">
                 Lasting relationships, not just transactions.
               </p>
             </div>
-            <span className="absolute -bottom-5 -right-5 -z-10 h-32 w-32 rounded-3xl bg-brand-red" aria-hidden />
+            <span className="absolute -bottom-5 -right-5 -z-10 h-32 w-32 rounded-3xl bg-line/10" aria-hidden />
           </Reveal>
           <div>
             <Reveal>

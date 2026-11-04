@@ -18,18 +18,16 @@ export default function PageHero({
   photo: PhotoData;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-navy text-white">
+    <section className="relative isolate overflow-hidden bg-ink text-white">
       <Photo photo={photo} priority sizes="100vw" className="absolute inset-0 -z-20 h-full w-full object-cover" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/90 to-navy/50" aria-hidden />
-      <div className="bg-grid-light absolute inset-0 -z-10 opacity-60" aria-hidden />
-      <span className="absolute -bottom-40 -left-20 -z-10 h-96 w-96 rounded-full bg-brand-red/30 blur-[100px]" aria-hidden />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/90 to-ink/50" aria-hidden />
       <div className="container py-14 sm:py-28 lg:py-32">
         <Reveal className="max-w-3xl">
           <nav aria-label="Breadcrumb" className="mb-6 text-sm text-white/65">
             <Link href="/" className="hover:text-white">
               Home
             </Link>
-            <span className="mx-2 text-brand-red" aria-hidden>
+            <span className="mx-2 text-white/40" aria-hidden>
               /
             </span>
             <span aria-current="page" className="text-white">
@@ -41,7 +39,6 @@ export default function PageHero({
           {text && <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/80 sm:mt-6 sm:text-lg">{text}</p>}
         </Reveal>
       </div>
-      <div className="absolute bottom-0 left-0 h-1 w-1/3 bg-brand-red" aria-hidden />
     </section>
   );
 }

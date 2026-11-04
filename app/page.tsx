@@ -10,7 +10,7 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import { ArrowRight, Award, Clock, audienceIcon, beliefIcon } from "@/components/Icons";
+import { ArrowRight, Award, audienceIcon, beliefIcon } from "@/components/Icons";
 import { aboutSnapshot, beliefs, chooseDivision, credentials, hero, whoWeServe } from "@/data/content";
 import { divisions } from "@/data/divisions";
 import { photos } from "@/data/images";
@@ -28,27 +28,21 @@ export default function HomePage() {
   return (
     <>
       {/* 1 ─ Hero (photo of Phnom Penh + navy overlay) */}
-      <section className="relative isolate overflow-hidden bg-navy text-white">
+      <section className="relative isolate overflow-hidden bg-ink text-white">
         <Photo
           photo={photos.phnomPenhNight}
           priority
           sizes="100vw"
           className="absolute inset-0 -z-20 h-full w-full animate-ken-burns object-cover"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/90 to-navy/55" aria-hidden />
-        <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-navy/80 to-transparent" aria-hidden />
-        <div className="bg-grid-light absolute inset-0 -z-10 opacity-50" aria-hidden />
-        <span className="absolute -left-40 top-1/3 -z-10 h-[30rem] w-[30rem] rounded-full bg-brand-red/25 blur-[120px]" aria-hidden />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/90 to-ink/55" aria-hidden />
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-ink/80 to-transparent" aria-hidden />
 
         <div className="container grid items-center gap-10 py-12 sm:gap-14 sm:py-24 lg:min-h-[calc(100vh-76px)] lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:py-28">
           <div className="animate-fade-up">
-            <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-red" aria-hidden />
-              {hero.eyebrow}
-            </p>
-            <h1 className="mt-7 text-[2.4rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.7rem]">
+            <h1 className="text-[2.4rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.7rem]">
               Your Trusted Partner for{" "}
-              <span className="text-gradient-red">Finance, Management, Healthcare &amp; Travel</span>
+              <span className="text-white/70">Finance, Management, Healthcare &amp; Travel</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/80">{hero.subtext}</p>
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap">
@@ -59,17 +53,6 @@ export default function HomePage() {
                 {hero.secondaryCta}
               </Link>
             </div>
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2.5 text-[13px] text-white/75 sm:mt-12 sm:gap-x-7 sm:text-sm">
-              <li className="flex items-center gap-2">
-                <Award size={18} className="text-brand-red" /> Licensed Tax Agent (GDT)
-              </li>
-              <li className="flex items-center gap-2">
-                <Award size={18} className="text-brand-red" /> KICPAA Member
-              </li>
-              <li className="flex items-center gap-2">
-                <Clock size={18} className="text-brand-red" /> Since 2023
-              </li>
-            </ul>
           </div>
           <HeroGateway />
         </div>
@@ -102,16 +85,16 @@ export default function HomePage() {
           <Reveal className="relative isolate mx-auto w-full max-w-lg pb-16 pr-10 lg:max-w-none">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2.25rem] shadow-lift">
               <Photo photo={photos.meeting} sizes="(min-width: 1024px) 520px, 90vw" maxWidth={1440} className="h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/50 to-transparent" aria-hidden />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" aria-hidden />
             </div>
             <div className="absolute bottom-0 right-0 w-[52%] overflow-hidden rounded-[1.75rem] border-[6px] border-soft shadow-lift">
               <Photo photo={photos.phnomPenhRiverside} sizes="300px" maxWidth={768} className="aspect-square h-full w-full object-cover" />
             </div>
             <div className="absolute -left-3 top-10 rounded-2xl border border-line/10 bg-card px-5 py-4 shadow-lift sm:-left-8">
-              <p className="font-display text-3xl font-extrabold text-brand-red">2023</p>
+              <p className="font-display text-3xl font-extrabold text-fg">2023</p>
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-fg/60">Established</p>
             </div>
-            <span className="absolute -right-2 top-1/3 h-24 w-24 rounded-full border-[14px] border-brand-red/80" aria-hidden />
+            <span className="absolute -right-2 top-1/3 h-24 w-24 rounded-full border-[14px] border-line/10" aria-hidden />
           </Reveal>
 
           <div>
@@ -174,24 +157,22 @@ export default function HomePage() {
       </section>
 
       {/* 6 ─ Who we serve (photo cards) */}
-      <section className="section relative isolate overflow-hidden bg-navy text-white">
-        <div className="bg-grid-light absolute inset-0 -z-10" aria-hidden />
-        <span className="absolute -right-40 top-0 -z-10 h-96 w-96 rounded-full bg-brand-red/20 blur-[110px]" aria-hidden />
+      <section className="section relative isolate overflow-hidden bg-soft">
         <div className="container">
-          <SectionHeading eyebrow={whoWeServe.eyebrow} heading={whoWeServe.heading} light />
+          <SectionHeading eyebrow={whoWeServe.eyebrow} heading={whoWeServe.heading} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {whoWeServe.items.map((w, i) => {
               const Icon = audienceIcon[w.icon];
               return (
                 <Reveal key={w.title} delay={i * 90}>
-                  <article className="group relative isolate flex aspect-[16/10] flex-col justify-end overflow-hidden rounded-[1.75rem] p-6 shadow-lift sm:aspect-[3/4] sm:p-7">
+                  <article className="group relative isolate flex aspect-[16/10] flex-col justify-end overflow-hidden rounded-[1.75rem] p-6 text-white shadow-lift sm:aspect-[3/4] sm:p-7">
                     <Photo
                       photo={w.photo}
                       sizes="(min-width: 1024px) 300px, (min-width: 640px) 50vw, 100vw"
                       maxWidth={1080}
                       className="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 -z-10 bg-gradient-to-t from-navy via-navy/70 to-navy/10 transition-colors duration-500" aria-hidden />
+                    <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/70 to-ink/10 transition-colors duration-500" aria-hidden />
                     <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 text-white backdrop-blur-md transition-colors duration-300 group-hover:bg-brand-red">
                       <Icon size={24} />
                     </span>
@@ -216,7 +197,7 @@ export default function HomePage() {
         <div className="container grid gap-5 md:grid-cols-2">
           {credentials.map((c, i) => (
             <Reveal key={c.title} delay={i * 90} className="flex items-center gap-5 rounded-2xl border border-line/10 bg-soft px-6 py-5">
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-red text-white shadow-glow">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-navy text-white dark:bg-white/10">
                 <Award size={26} />
               </span>
               <p>
@@ -234,9 +215,9 @@ export default function HomePage() {
           <Reveal className="relative">
             <div className="relative aspect-[5/4] overflow-hidden rounded-[2.25rem] shadow-lift">
               <Photo photo={photos.handshake} sizes="(min-width: 1024px) 520px, 100vw" maxWidth={1440} className="h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-navy/70 to-transparent" aria-hidden />
+              <div className="absolute inset-0 bg-gradient-to-tr from-ink/70 to-transparent" aria-hidden />
             </div>
-            <div className="absolute -bottom-6 left-6 flex items-center gap-4 rounded-2xl bg-brand-red px-6 py-4 text-white shadow-glow sm:left-10">
+            <div className="absolute -bottom-6 left-6 flex items-center gap-4 rounded-2xl border border-line/10 bg-card px-6 py-4 text-fg shadow-lift sm:left-10">
               <span className="font-display text-4xl font-extrabold leading-none">5.0</span>
               <span className="text-sm font-semibold leading-tight">
                 Rated by

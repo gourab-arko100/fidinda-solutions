@@ -9,23 +9,23 @@
 @layer base {
   :root {
     --bg: 255 255 255; /* page background */
-    --soft: 246 245 251; /* alternate section background */
+    --soft: 246 246 248; /* alternate section background — neutral light grey */
     --card: 255 255 255; /* cards */
-    --fg: 28 9 90; /* main text = Deep Navy */
-    --line: 28 9 90; /* borders (used with opacity) */
+    --fg: 24 21 48; /* main text — deep ink with a hint of the brand navy */
+    --line: 24 21 48; /* borders (used with opacity) */
     --band: 28 9 90; /* dark brand bands */
-    --shadow: 28 9 90;
+    --shadow: 15 14 30;
     color-scheme: light;
   }
-  /* Dark theme is built from the brand navy #1C095A, not black */
+  /* Dark theme: neutral charcoal, so navy and red stay as accents */
   .dark {
-    --bg: 16 5 54; /* #100536 — deep brand navy */
-    --soft: 22 8 70; /* #160846 */
-    --card: 28 9 90; /* #1C095A — the official Deep Navy */
-    --fg: 240 238 250;
-    --line: 240 238 250;
-    --band: 28 9 90;
-    --shadow: 5 1 20;
+    --bg: 14 14 19; /* #0E0E13 */
+    --soft: 20 20 27; /* #14141B */
+    --card: 26 26 35; /* #1A1A23 */
+    --fg: 238 238 243;
+    --line: 238 238 243;
+    --band: 26 26 35;
+    --shadow: 0 0 0;
     color-scheme: dark;
   }
 
@@ -75,7 +75,7 @@
 
 @layer components {
   .eyebrow {
-    @apply inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-brand-red;
+    @apply inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-fg/55;
   }
   .eyebrow::before {
     content: "";
@@ -94,7 +94,7 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-full bg-brand-red px-6 py-3 text-sm font-bold text-white shadow-glow transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-redDark disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0;
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-red px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-redDark disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0;
   }
   .btn-outline {
     @apply inline-flex items-center gap-2 rounded-full border-2 border-fg/80 px-6 py-2.5 text-sm font-bold text-fg transition-all duration-200 hover:border-brand-red hover:bg-brand-red hover:text-white;
@@ -186,8 +186,7 @@
 
 /* Small red text needs a touch more brightness to stay readable on dark navy.
    Buttons, lines and fills keep the exact brand red #E1041C. */
-.dark .text-brand-red,
-.dark .eyebrow {
+.dark .text-brand-red {
   color: #ff4d61;
 }
 .dark .eyebrow::before,

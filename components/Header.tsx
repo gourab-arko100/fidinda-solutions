@@ -101,7 +101,7 @@ export default function Header() {
                     }`}
                   >
                     <div className="overflow-hidden rounded-2xl border border-line/10 bg-card shadow-lift">
-                      <div className="h-1 bg-gradient-to-r from-brand-red to-navy" aria-hidden />
+                      <div className="h-1 bg-gradient-to-r from-brand-red to-ink" aria-hidden />
                       <ul className="p-2">
                         {divisions.map((d) => {
                           const Icon = divisionIcon[d.icon];
