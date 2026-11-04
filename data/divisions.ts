@@ -35,6 +35,8 @@ export interface Division {
   contactUrl: string;
   /** Logo in /public/logos — a styled icon is shown automatically if the file is missing. */
   logo: string;
+  /** Full horizontal division logo (used in the home hero panel). */
+  fullLogo: string;
   /** Photo used on cards and the /divisions page (edit in /data/images.ts). */
   image: Photo;
   icon: IconName;
@@ -60,6 +62,7 @@ export const divisions: Division[] = [
     url: DIVISION_URLS.financial,
     contactUrl: withContact(DIVISION_URLS.financial),
     logo: "/logos/financial.png",
+    fullLogo: "/logos/full/financial.png",
     image: photos.financial,
     icon: "calculator",
     tagline: "Delivering Financial Clarity, Compliance, and Confidence",
@@ -88,6 +91,7 @@ export const divisions: Division[] = [
     url: DIVISION_URLS.management,
     contactUrl: withContact(DIVISION_URLS.management),
     logo: "/logos/management.png",
+    fullLogo: "/logos/full/management.png",
     image: photos.management,
     icon: "briefcase",
     tagline: "Strengthening Organisations Through Expertise and Innovation",
@@ -120,6 +124,7 @@ export const divisions: Division[] = [
     url: DIVISION_URLS.health,
     contactUrl: withContact(DIVISION_URLS.health),
     logo: "/logos/health.png",
+    fullLogo: "/logos/full/health.png",
     image: photos.health,
     icon: "heart",
     tagline: "Advanced Healthcare Abroad, Guided from Cambodia",
@@ -152,6 +157,7 @@ export const divisions: Division[] = [
     url: DIVISION_URLS.travel,
     contactUrl: withContact(DIVISION_URLS.travel),
     logo: "/logos/travel.png",
+    fullLogo: "/logos/full/travel.png",
     image: photos.travel,
     icon: "plane",
     tagline: "Making Every Journey Simpler, Smarter, and More Memorable",
