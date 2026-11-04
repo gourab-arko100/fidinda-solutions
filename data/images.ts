@@ -118,6 +118,11 @@ export const photos = {
     alt: "Team collaborating on a plan with sticky notes",
     page: "https://unsplash.com/photos/team-collaborating-with-sticky-notes-w00FkE6e8zE",
   },
+
+  /* Who We Serve (home page) */
+  serveBusinesses: { src: "/images/serve/businesses.jpg", alt: "Cambodian businesswoman working on a laptop in a Phnom Penh office" },
+  serveOrganisations: { src: "/images/serve/organisations.jpg", alt: "NGO team meeting with community members in a Cambodian village" },
+  serveIndividuals: { src: "/images/serve/individuals.jpg", alt: "Traveller holding a Cambodian passport and a Canadian passport at an airport" },
 } satisfies Record<string, Photo>;
 
 export type PhotoKey = keyof typeof photos;

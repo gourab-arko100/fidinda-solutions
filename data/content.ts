@@ -86,9 +86,9 @@ export const whoWeServe = {
   eyebrow: "Who We Serve",
   heading: "Support for every kind of client",
   items: [
-    { title: "Businesses", icon: "business", photo: photos.presentation, text: "Start-ups, SMEs and established companies operating in Cambodia." },
-    { title: "Organisations & NGOs", icon: "ngo", photo: photos.community, text: "Local and international NGOs, associations and development projects." },
-    { title: "Individuals", icon: "individual", photo: photos.passports, text: "Professionals, patients and travellers who want a dependable guide." },
+    { title: "Businesses", icon: "business", photo: photos.serveBusinesses, text: "Start-ups, SMEs and established companies operating in Cambodia." },
+    { title: "Organisations & NGOs", icon: "ngo", photo: photos.serveOrganisations, text: "Local and international NGOs, associations and development projects." },
+    { title: "Individuals", icon: "individual", photo: photos.serveIndividuals, text: "Professionals, patients and travellers who want a dependable guide." },
     { title: "Families", icon: "family", photo: photos.family, text: "Families planning medical care abroad, holidays or important trips." },
   ] satisfies { title: string; icon: AudienceIcon; photo: Photo; text: string }[],
 };
