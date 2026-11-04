@@ -13,6 +13,7 @@ Built with Next.js (App Router), TypeScript and Tailwind CSS.
 | Division names, taglines, tags, full service lists, accent colours | `data/divisions.ts` |
 | Phones, email, socials, map link, WhatsApp/Telegram button, SEO title/description | `data/site.ts` |
 | **All photos** (hero, division cards, About, Contact, CTA…) | `data/images.ts` |
+| "Our Mission & Vision" page (vision, mission, Four Fs, commitment) | `app/mission-vision/page.tsx`; text in `data/content.ts` → `about` |
 | Co-founder message (text, name, title) | `data/content.ts` → `founderMessage`; photo at `public/images/co-founder.jpg` |
 | "Why Choose Us" cards (home) | `data/content.ts` → `whyChooseUs`; pictures in `public/images/why/` |
 | All page text (hero, Four Fs, stats, testimonials, About, Mission/Vision, timeline, contact labels, 404) | `data/content.ts` |

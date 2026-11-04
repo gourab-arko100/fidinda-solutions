@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
       ...external(toFinancial, DIVISION_URLS.financial),
       ...external(toManagement, DIVISION_URLS.management),
       { source: "/about-us", destination: "/about", permanent: true },
-      { source: "/mission-vision-and-beliefs", destination: "/about", permanent: true },
+      { source: "/mission-vision-and-beliefs", destination: "/mission-vision", permanent: true },
       { source: "/our-services", destination: "/divisions", permanent: true },
       { source: "/request-for-quotation", destination: "/contact", permanent: true },
     ];

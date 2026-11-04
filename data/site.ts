@@ -76,8 +76,8 @@ export const footerColumns = {
     links: [
       { label: "About Us", href: "/about" },
       { label: "Message from Co-founder", href: "/about#co-founder" },
-      { label: "Our Beliefs", href: "/about#beliefs" },
-      { label: "Vision & Mission", href: "/about#mission" },
+      { label: "Our Mission & Vision", href: "/mission-vision" },
+      { label: "Our Beliefs", href: "/mission-vision#beliefs" },
       { label: "Contact Us", href: "/contact" },
     ],
   },
@@ -86,6 +86,7 @@ export const footerColumns = {
 /** Header menu. (No "Home" item — the logo links to the home page.) */
 export const navLinks = [
   { label: "About", href: "/about" },
+  { label: "Our Mission & Vision", href: "/mission-vision" },
   { label: "Our Divisions", href: "/divisions", dropdown: true },
   { label: "Contact", href: "/contact" },
 ] as const;

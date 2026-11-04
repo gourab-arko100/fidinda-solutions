@@ -105,6 +105,11 @@ export const photos = {
   },
 
   /* Vision & Mission */
+  compass: {
+    src: u("photo-1504607798333-52a30db54a5d"),
+    alt: "Compass held in hand, pointing the way forward",
+    page: "https://unsplash.com/photos/shallow-focus-photograph-of-black-and-gray-compass-uCMKx2H1Y38",
+  },
   vision: {
     src: u("photo-1522506209496-4536d9020ec4"),
     alt: "Person standing on a mountain top facing the sunrise",

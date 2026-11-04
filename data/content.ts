@@ -144,11 +144,18 @@ export const about = {
     /** Edit the "year" labels freely. */
     items: [
       { year: "2023", title: "Founded", text: "Founded as Fidinda Financial & Management Solutions Co., Ltd." },
-      { year: "Expansion", title: "New divisions", text: "Fidinda Health Solutions and Fidinda Travel Solutions launched." },
-      { year: "Today", title: "One brand", text: "Fidinda Solutions — one brand with four specialised divisions." },
+      { year: "Expansion 2025", title: "Fidinda Health Solutions", text: "Fidinda Health Solutions launched — healthcare facilitation for Cambodian patients and families seeking care abroad." },
+      { year: "Expansion 2026", title: "Fidinda Travel Solutions", text: "Fidinda Travel Solutions launched — personalised travel arrangements for individuals, families and groups." },
+      { year: "Today", title: "Fidinda Solutions", text: "One brand with four specialised divisions: Financial, Management, Health and Travel." },
     ],
   },
   divisionsHeading: "Our Four Divisions",
+  /** The separate "Our Mission & Vision" page (/mission-vision). */
+  missionVisionHero: {
+    eyebrow: "Our Mission & Vision",
+    heading: "What drives us, and where we're heading",
+    text: "Our mission, our vision, the Four Fs that guide every division, and our commitment to the people we serve.",
+  },
   vision: {
     heading: "Our Vision",
     text: "To create long-lasting partnerships with our clients, built on trust, integrity, and mutual growth.",
