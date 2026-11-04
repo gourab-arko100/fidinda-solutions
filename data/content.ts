@@ -227,11 +227,7 @@ export const founderMessage = {
   name: "Fazleh Borkat Manik Shah Mazumder",
   role: "Co-Founder & Director",
   photo: { src: "/images/co-founder.jpg", alt: "Fazleh Borkat Manik Shah Mazumder, Co-Founder & Director of Fidinda Solutions" },
-  /**
-   * Paragraphs. Wrap words in **double asterisks** to make them bold.
-   * The first `leadCount` paragraphs sit beside the photo; the rest continue below it.
-   */
-  leadCount: 3,
+  /** Paragraphs. Wrap words in **double asterisks** to make them bold. */
   paragraphs: [
     "When we established Fidinda Financial & Management Solutions Co., Ltd. in Cambodia in 2023, our vision was to create a professional service organisation that businesses and institutions could rely upon for expertise, integrity, and practical solutions. We began our journey by helping businesses and organisations navigate the complexities of financial management, regulatory compliance, organisational development, and strategic decision-making.",
     "Over the years, our interactions with clients, partners, and communities have strengthened an important belief: **the true value of a service organisation lies not merely in the services it delivers, but in its ability to understand people's needs, simplify complex processes, and create meaningful solutions.**",
