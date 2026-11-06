@@ -94,7 +94,7 @@ export const footerColumns = {
 
 /** Header menu. (No "Home" item — the logo links to the home page.) */
 export const navLinks = [
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "Our Mission & Vision", href: "/mission-vision" },
   { label: "Our Divisions", href: "/divisions", dropdown: true },
   { label: "Contact", href: "/contact" },
